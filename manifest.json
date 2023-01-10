@@ -1,0 +1,21 @@
+{
+  "name": "Arc Reporting Tying Out",
+  "description": "Test Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "contextMenus", "tabs", "bookmarks"],
+  "content_scripts": [
+    {
+      "matches": ["https://sankareganthan.com/"],
+      "run_at": "document_idle",
+      "js": ["content.js"]
+    }
+  ],
+  "action": { "default_popup": "popup.html" },
+  "icons": {
+    "16": "Icon.png"
+  }
+}
